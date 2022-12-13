@@ -1,0 +1,31 @@
+syntax = "proto2";
+package model;
+
+// Stickband
+message StickbandConf {
+    optional double fd = 1;
+    optional double J = 2;
+}
+
+// deadzone
+message DeadzoneConf {
+    optional double c_l = 1;
+    optional double c_r = 2;
+}
+
+// deadband
+message DeadbandConf {
+    optional double d_l = 1;
+    optional double d_r = 2;
+}
+
+// first order inertial element: G(s) = k/(1+tau*s)
+message FirstOrderInertialElementConf {
+    optional double k = 1;
+    optional double tau = 2;
+    optional double init_value = 3;
+    optional double N = 4;
+}
+
+
+
